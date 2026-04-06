@@ -17,10 +17,11 @@ declare -A CC=(  )
 
 for ch in `cat "$1" | fold -w1`
 do
+   #### convert char to its ascii value
    # from https://askubuntu.com/questions/1127282/convert-a-string-of-characters-to-ascii-values
+   # dez=`echo -n "$ch" | od -An -t u1`
    # see also https://stackoverflow.com/questions/70130059/how-do-you-convert-characters-to-ascii-without-use-of-the-printf-in-bash
-   # convert char to its ascii value
-   dez=`echo -n "$ch" | od -An -t u1`
+   dez=`printf "%d" "'$ch"`
    ((CC[$dez]++))    # uninitialized elements take value 0
 done
 
