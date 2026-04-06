@@ -12,6 +12,6 @@ flexible Lösung her: Das Skript generiert aus einer Konvertierungstabelle ein d
 mit hart kodierten sed Befehlen, das dann nach Rückfrage automatisch gestartet wird.
 
 ## countCharsNew.sh
-verwendet als Index statt dem Zeichen selbst den Dezimalwert, um Porbleme mit Sonderzeichen wie ' " * [ @
+verwendet als Index statt dem Zeichen selbst den Dezimalwert, um Probleme mit Sonderzeichen wie ' " * [ @
 zu vermeiden. 
 Statt doppelter for/while Schleife wandelt fold -w1 jede Zeile in Einzelzeichen um.
