@@ -10,3 +10,8 @@ Nachdem die 1. Version mit hart kodierten sed Ersetzungen für eine 24MB ziffern
 20 Sekunden benötigte, die Musterlösungen dagegen 30 Minuten, musste eine andere schnelle, aber gleichzeitig
 flexible Lösung her: Das Skript generiert aus einer Konvertierungstabelle ein dediziertes Skript
 mit hart kodierten sed Befehlen, das dann nach Rückfrage automatisch gestartet wird.
+
+## countCharsNew.sh
+verwendet als Index statt dem Zeichen selbst den Dezimalwert, um Porbleme mit Sonderzeichen wie ' " * [ @
+zu vermeiden. 
+Statt doppelter for/while Schleife wandelt fold -w1 jede Zeile in Einzelzeichen um.
